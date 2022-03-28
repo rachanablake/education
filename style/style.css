@@ -1,0 +1,111 @@
+:root{
+--color0: #F5F5F5;
+--color1: #F05454;
+--color2: #30475E;
+--color3: #121212;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(18,18,18,0.7),rgba(18,18,18,0.7)),url(/style/eduford_img/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header .nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .nav img{
+    width: 150px;
+}
+.header .nav .link{
+    flex: 1;
+    text-align: right;
+}
+.header .nav .link ul li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 8px 12px;
+}
+.header .nav .link ul li a{
+    text-decoration: none;
+    color: var(--color0);
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+.header .nav .link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--color1);
+    display: block;
+    transition: 0.3s;
+    margin: auto;
+}
+.header .nav .link ul li:hover::after{
+    width: 100%;
+}
+.header .text-box{
+    width: 90%;
+    color: var(--color0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.header .text-box h1{
+    font-size: 50px;
+}
+.header .text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+.header .text-box .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color0);
+    border: 1px solid var(--color0);
+    padding: 8px 26px;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+}
+.header .text-box .hero-btn:hover{
+    border: 1px solid var(--color0);
+    background-color: var(--color1);
+    transition: 0.3s;
+}
+@media(max-width: 700px){
+    .header .text-box h1{
+        font-size: 25px;
+    }
+    .header .text-box p{
+        margin: 10px 0 40px;
+        font-size: 9px;
+    }
+    .header .nav .link ul li{
+        display: block;
+    }
+    .header .nav .link{
+        position: absolute;
+        width: 200px;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        text-align: right;
+        z-index: 2;
+        background-color: var(--color2);
+    }
+}
