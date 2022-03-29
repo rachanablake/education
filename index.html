@@ -20,8 +20,8 @@
         <div class="nav">
             <a href="#"><img src="style/eduford_img/logo.png" alt="" srcset=""></a>
 
-            <div class="link">
-                <i class="fa-solid fa-bars"></i>
+            <div class="link" id="link">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Service</a></li>
@@ -30,7 +30,7 @@
                     <li><a href="#">About Us</a></li>
                 </ul>
             </div>
-            <i class="fa-duotone fa-xmark"></i>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
         </div>
  
         <div class="text-box">
@@ -40,5 +40,16 @@
         </div>
 
     </div>
+
+
+    <script>
+        var link = document.getElementById("link");
+        function showMenu(){
+            link.style.right="0";
+        }
+        function hideMenu(){
+            link.style.right="-200px";
+        }
+    </script>
 </body>
 </html>
